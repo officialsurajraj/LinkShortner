@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost:27017/LinkShortner');
+mongoose.connect(process.env.DATABASE);
 const db = mongoose.connection;
 db.on('error',()=>{
     console.log('Error');
